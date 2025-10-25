@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify: AI Vibe Themer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🎨</span>
+                <h1>Moodify</h1>
+            </div>
+            <p class="subtitle">AI Vibe Themer</p>
+        </header>
+
+        <div class="ai-mode-section">
+            <div class="ai-toggle">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="aiModeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="ai-label">AI Mode</span>
+            </div>
+            <p class="ai-description">Let AI analyze your browsing patterns and suggest themes</p>
+        </div>
+
+        <div class="mood-selection">
+            <h3>Choose Your Vibe</h3>
+            <div class="mood-grid">
+                <button class="mood-btn" data-mood="chill">
+                    <span class="mood-emoji">😌</span>
+                    <span class="mood-name">Chill</span>
+                </button>
+                <button class="mood-btn" data-mood="focus">
+                    <span class="mood-emoji">🎯</span>
+                    <span class="mood-name">Focus</span>
+                </button>
+                <button class="mood-btn" data-mood="energetic">
+                    <span class="mood-emoji">⚡</span>
+                    <span class="mood-name">Energetic</span>
+                </button>
+                <button class="mood-btn" data-mood="vintage">
+                    <span class="mood-emoji">📚</span>
+                    <span class="mood-name">Vintage</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="ai-analysis" id="aiAnalysis" style="display: none;">
+            <div class="analysis-content">
+                <div class="spinner"></div>
+                <p>AI analyzing your vibe...</p>
+            </div>
+        </div>
+
+        <div class="current-theme" id="currentTheme" style="display: none;">
+            <h4>Current Theme</h4>
+            <div class="theme-preview" id="themePreview"></div>
+            <button class="reset-btn" id="resetTheme">Reset Theme</button>
+        </div>
+
+        <div class="footer">
+            <button class="apply-btn" id="applyTheme" disabled>Apply Theme</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
